@@ -1,4 +1,4 @@
-from singly_linked_list.singly_linked_list import Node, LinkedList
+from singly_linked_list import Node, LinkedList
 
 """
 A stack is a data structure whose primary purpose is to store and

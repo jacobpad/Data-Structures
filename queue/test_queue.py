@@ -1,5 +1,8 @@
 import unittest
 from queue import Queue
+# from queue import Node
+# from queue import LinkedList
+from singly_linked_list import LinkedList
 
 class QueueTests(unittest.TestCase):
     def setUp(self):
