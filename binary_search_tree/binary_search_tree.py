@@ -18,7 +18,7 @@ class BSTNode:
         self.right = None
 
     def insert(self, value):
-    # Insert the given value into the tree
+        # Insert the given value into the tree
         # Left side
         if value < self.value:                  # If the value is on the left side is less than the root node
             if self.left is None:               # If it's empty, put it here
@@ -34,8 +34,8 @@ class BSTNode:
                 self.right.insert(value)        # run it again.
 
     def contains(self, target):
-    # Return True if the tree contains the value
-    # False if it does not
+        # Return True if the tree contains the value
+        # False if it does not
         if self.value == target:                # If what we're looking for is the same as root
             return True
 
@@ -51,9 +51,8 @@ class BSTNode:
             else:
                 return self.right.contains(target)
 
-
     def get_max(self):
-    # Return the maximum value found in the tree
+        # Return the maximum value found in the tree
         # If there's only one node
         # Only deal with the right side as smaller values always go left
         current = self.right                    # Set the right node as the current node
@@ -64,15 +63,19 @@ class BSTNode:
             current = current.right
         return value
 
-
     def for_each(self, fn):
-    # Call the function `fn` on the value of each node
-        pass
+        # Call the function `fn` on the value of each node
+        fn(self.value)
+        if self.left:                           # If something to the left exists,
+            self.left.for_each(fn)              # call it on the function
+        if self.right:                          # If something to the right exists,
+            self.right.for_each(fn)             # call it on the function
 
     # Part 2 -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
+
     def in_order_print(self, node):
         pass
 
