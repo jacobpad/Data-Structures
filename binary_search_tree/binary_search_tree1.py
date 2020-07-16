@@ -2,6 +2,7 @@
 Binary search trees are a data structure that enforce an ordering over 
 the data they store. That ordering in turn makes it a lot more efficient 
 at searching for a particular piece of data in the tree. 
+
 This part of the project comprises two days:
 1. Implement the methods `insert`, `contains`, `get_max`, and `for_each`
    on the BSTNode class.
@@ -70,144 +71,31 @@ class BSTNode:
         if self.right:                          # If something to the right exists,
             self.right.for_each(fn)             # call it on the function
 
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
+    # Part 2 -----------------------
 
-    # in_order_print ---------------------------------------------------------
-    # in_order_print ---------------------------------------------------------
-    # in_order_print ---------------------------------------------------------
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
 
     def in_order_print(self, node):
-        """
-        # Print all the values in order from low to high
-        # Hint:  Use a recursive, depth first traversal
+        pass
 
-        # What should we doif the current node is none?
-        # Which direction should we move until we hit the end?
-        # When should we switch the direction we're going?
-        # If the current node is none, we know we've reached the end of a recursion.
-        """
-
-        if self is None:
-            return
-        # Check if we can move left
-        if self.left is not None:
-            self.left.in_order_print(self.left)
-        # Visit the node by printing the value
-        print(self.value)
-        # Check if we can move right
-        if self.right is not None:
-            self.right.in_order_print(self.right)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # bft_print --------------------------------------------------------------
-    # bft_print --------------------------------------------------------------
-    # bft_print --------------------------------------------------------------
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
-
     def bft_print(self, node):
         pass
 
-    # dft_print --------------------------------------------------------------
-    # dft_print --------------------------------------------------------------
-    # dft_print --------------------------------------------------------------
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
-
     def dft_print(self, node):
         pass
 
-    # Stretch Goals ----------------------------------------------------------
-    # Stretch Goals ----------------------------------------------------------
-    # Stretch Goals ----------------------------------------------------------
+    # Stretch Goals -------------------------
     # Note: Research may be required
 
     # Print Pre-order recursive DFT
-
     def pre_order_dft(self, node):
         pass
 
     # Print Post-order recursive DFT
-
     def post_order_dft(self, node):
         pass
