@@ -8,6 +8,10 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+###############################
+########## CODE HERE ##########
+###############################
+from queue import Queue
 
 
 class BSTNode:
@@ -122,71 +126,115 @@ class BSTNode:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # bft_print --------------------------------------------------------------
     # bft_print --------------------------------------------------------------
     # bft_print --------------------------------------------------------------
-    # Print the value of every node, starting with the given node,
-    # in an iterative breadth first traversal
 
     def bft_print(self, node):
-        pass
+        """
+        # Print the value of every node, starting with the given node,
+        # in an iterative breadth first traversal
+
+        Import the queue class from the other day
+
+        Use a queue to form a line for the nodes to get in
+
+        - Place the root in the queue
+        - Need a while loop
+            - While length of the queue is greater than 0, 
+              dequeue that item from the front and print it
+        - Place current nodes left child (if not none) in the queue
+        - Place current nodes right child (if not none) in the queue
+        """
+
+        # Instantiate the queue class
+        q = Queue()             
+
+        # Put the root node in the queue
+        q.enqueue(node)
+
+        # While length of the queue is greater than 0
+        while q.size > 0:
+            
+            #Instantiate
+            dq = q.dequeue()
+
+            # Print the dequeued value
+            print(dq.value)
+
+            # Try going left
+            if dq.left:
+                q.enqueue(dq.left)
+            
+            # Try going right
+            if dq.right:
+                q.enqueue(dq.right)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     # dft_print --------------------------------------------------------------
     # dft_print --------------------------------------------------------------
