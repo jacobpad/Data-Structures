@@ -12,6 +12,7 @@ This part of the project comprises two days:
 ########## CODE HERE ##########
 ###############################
 from queue import Queue
+from stack import Stack
 
 
 class BSTNode:
@@ -78,22 +79,6 @@ class BSTNode:
     # Part 2 -----------------------------------------------------------------
     # Part 2 -----------------------------------------------------------------
     # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
-    # Part 2 -----------------------------------------------------------------
 
     # in_order_print ---------------------------------------------------------
     # in_order_print ---------------------------------------------------------
@@ -123,9 +108,6 @@ class BSTNode:
         if self.right is not None:
             self.right.in_order_print(self.right)
 
-
-
-
     # bft_print --------------------------------------------------------------
     # bft_print --------------------------------------------------------------
     # bft_print --------------------------------------------------------------
@@ -148,14 +130,14 @@ class BSTNode:
         """
 
         # Instantiate the queue class
-        q = Queue()             
+        q = Queue()
 
         # Put the root node in the queue
         q.enqueue(node)
 
         # While length of the queue is greater than 0
         while q.size > 0:
-            
+
             #Instantiate
             dq = q.dequeue()
 
@@ -165,85 +147,44 @@ class BSTNode:
             # Try going left
             if dq.left:
                 q.enqueue(dq.left)
-            
+
             # Try going right
             if dq.right:
                 q.enqueue(dq.right)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # dft_print --------------------------------------------------------------
     # dft_print --------------------------------------------------------------
     # dft_print --------------------------------------------------------------
-    # Print the value of every node, starting with the given node,
-    # in an iterative depth first traversal
 
     def dft_print(self, node):
-        pass
+        """
+        # Print the value of every node, starting with the given node,
+        # in an iterative depth first traversal
+
+        # Initialize an empty stack
+        # Push the root node onto the stack
+​
+        # While loop to manager our iteration, if stack is not empty enter the while loop
+            # Pop top item off the stack
+            # Print that item's value
+​
+            # if there is a right subtree
+                # push right item onto the stack
+                
+            # if there is a left subtree
+                # push left item onto the stack
+        """
+
+        s = Stack()
+        s.push(node)
+        while s.size > 0:
+            s_pop = s.pop()
+            print(s_pop.value)
+
+            if s_pop.right is not None:
+                s.push(s_pop.right)
+            if s_pop.left is not None:
+                s.push(s_pop.left)
 
     # Stretch Goals ----------------------------------------------------------
     # Stretch Goals ----------------------------------------------------------
